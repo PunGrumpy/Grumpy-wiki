@@ -39,7 +39,7 @@ module.exports = {
                 path: 'wiki/dev',
                 routeBasePath: 'dev',
                 sidebarPath: require.resolve('./sidebars.js'),
-                editUrl: 'https://git./zhouzhongping/wiki/src/branch/master',
+                editUrl: 'https://github.com/PunGrumpy/Grumpy-wiki/tree/main/wiki/dev',
                 showLastUpdateAuthor: true,
                 showLastUpdateTime: true,
                 breadcrumbs: false,
