@@ -5,104 +5,104 @@ sidebar_position: 1
 data: January 13, 2022
 ---
 
-本章介绍开始使用 Git 前的相关知识。我们会先了解一些版本控制工具的历史背景，然后试着让 Git 在你的系统上跑起来，直到最后配置好，可以正常开始开发工作。读完本章，你就会明白为什么 Git 会如此流行，为什么你应该立即开始使用它。
+This chapter introduces what you need to know before getting started with Git. We will first understand the historical background of some version control tools, and then try to get Git running on your system until it is finally configured and can start development work normally. By the end of this chapter, you'll understand why Git is so popular and why you should start using it right away.
 
-## 版本控制系统
+## Version control system
 
-版本控制系统（Version Control Systems，简称 VCS）是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。
+Version Control Systems (VCS for short) is a system that records changes in the content of one or several files for future revisions to a specific version.
 
-### 本地版本控制系统
+### Local version control system
 
-本地版本控制系统大多采用数据库来记录文件的历次更新差异。
+Most local version control systems use databases to record the differences between previous updates of files.
 
-其中最流行的一种叫做 RCS，现今许多计算机系统上都还看得到它的踪影。RCS 的工作原理是在硬盘上保存补丁集（补丁是指文件修订前后的变化）；通过应用所有的补丁，可以重新计算出各个版本的文件内容。
+One of the most popular is called RCS, which can be found on many computer systems today. RCS works by saving patch sets (patches refer to changes before and after file revisions) on the hard disk; by applying all the patches, the file content of each version can be recalculated.
 
-### 集中化的版本控制系统
+### Centralized version control system
 
-为了解决本地版本控制系统无法协同工作的问题，集中化的版本控制系统（Centralized Version Control Systems，简称 CVCS）应允而生。其采用一个单一集中管理的服务器，保存所有文件的修订版本；协作者通过客户端连接服务器，拉取最新文件或提交更新。
+In order to solve the problem that local version control systems cannot work together, a centralized version control system (Centralized Version Control Systems, referred to as CVCS) was born. It uses a single, centrally managed server that saves revisions of all files; collaborators connect to the server through clients to pull the latest files or submit updates.
 
-**优点**：相较于本地 VCS 来说。 现在，每个人都可以在一定程度上看到项目中的其他人正在做些什么。 而管理员也可以轻松掌控每个开发者的权限，并且管理一个 CVCS 要远比在各个客户端上维护本地数据库来得轻松容易。
+**Pros**: Compared to local VCS. Now everyone can see to some extent what other people in the project are doing. And administrators can easily control the permissions of each developer, and managing a CVCS is much easier than maintaining a local database on each client.
 
-**缺点**：显而易见的缺点是中央服务器的单点故障。例如宕机一小时，那么在这一小时内，谁都无法提交更新，也就无法协同工作；如果中心数据库所在的磁盘发生损坏，又没有做恰当备份，毫无疑问你将丢失所有数据——包括项目的整个变更历史，只剩下人们在各自机器上保留的单独快照。
+**Cons**: The obvious disadvantage is the single point of failure of the central server. For example, if the downtime is one hour, then within this hour, no one can submit updates, and they cannot work together; if the disk where the central database is located is damaged, and proper backups are not made, there is no doubt that you will lose all data—— Include the entire change history of the project, leaving only the individual snapshots that people keep on their respective machines.
 
-### 分布式版本控制系统
+### Distributed Version Control System
 
-为了解决集中化的版本控制系统的痛处，分布式版本控制系统（Distributed Version Control System，简称 DVCS）面世了。分布式顾名思义，每一个节点都基于公认中心节点服务器的镜像拷贝，故每个节点都拥有代码仓库的完整信息。因此不存在中心节点故障无法工作、物理损坏无法恢复、日志历史不完整导致协作者无法相互协作。
+In order to solve the pain point of centralized version control system, distributed version control system (Distributed Version Control System, DVCS for short) came out. Distributed, as the name implies, each node is based on a mirror copy of the recognized central node server, so each node has complete information about the code repository. Therefore, there is no central node failure that cannot work, physical damage that cannot be recovered, and incomplete log history that prevent collaborators from cooperating with each other.
 
-更进一步，许多这类系统都可以指定和若干不同的远端代码仓库进行交互。籍此，你就可以在同一个项目中，分别和不同工作小组的人相互协作。 你可以根据需要设定不同的协作流程，比如层次模型式的工作流，而这在以前的集中式系统中是无法实现的。
+Furthermore, many of these systems can be specified to interact with several different remote code repositories. In this way, you can collaborate with people in different working groups on the same project. You can set up different collaborative processes as needed, such as a hierarchical model-style workflow, which was not possible in previous centralized systems.
 
-## Git 简史
+## A brief history of Git
 
-同生活中的许多伟大事物一样，Git 诞生于一个极富纷争大举创新的年代。
+Like many great things in life, Git was born in a time of great contention and innovation.
 
-Linux 内核开源项目有着为数众多的参与者。 绝大多数的 Linux 内核维护工作都花在了提交补丁和保存归档的繁琐事务上（1991－2002 年间）。到 2002 年，整个项目组开始启用一个专有的分布式版本控制系统 BitKeeper 来管理和维护代码。
+The Linux kernel open source project has a large number of participants. The vast majority of Linux kernel maintenance was spent on the tedious business of submitting patches and keeping archives (between 1991 and 2002). By 2002, the entire project team began to enable BitKeeper, a proprietary distributed version control system, to manage and maintain the code.
 
-到了 2005 年，开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了 Linux 内核社区免费使用 BitKeeper 的权力。 这就迫使 Linux 开源社区（特别是 Linux 的缔造者 Linus Torvalds）基于使用 BitKeeper 时的经验教训，开发出自己的版本系统。 他们对新的系统制订了若干目标：
+In 2005, the partnership between the commercial companies that developed BitKeeper and the Linux kernel open source community ended, and they took back the Linux kernel community's right to use BitKeeper for free. This forced the Linux open source community (especially the creator of Linux, Linus Torvalds) to develop its own versioning system based on lessons learned from using BitKeeper. They set several goals for the new system:
 
--   **速度**
--   **简单的设计**
--   **对非线性开发模式的强力支持（允许成千上万个并行开发的分支）**
--   **完全分布式**
--   **有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量）**
+-   **speed**
+-   **Simple Design**
+-   **Strong support for non-linear development mode (allowing thousands of parallel development branches)**
+-   **Fully distributed**
+-   **Ability to efficiently manage very large scale projects like Linux kernel (speed and data volume)**
 
-自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。 它的速度飞快，极其适合管理大项目，有着令人难以置信的非线性分支管理系统。
+Since its inception in 2005, Git has matured and matured, maintaining its original goals while being highly usable. It's fast, great for managing large projects, and has an incredibly non-linear branch management system.
 
-## Git 特性
+## Git features
 
-那么，简单地说，Git 究竟是怎样的一个系统呢？它的主要特性是什么？
+So, in short, what kind of system is Git? What are its main features?
 
-### 直接记录快照，而非差异比较
+### Directly record snapshots, not diff comparisons
 
-Git 与其他版本控制系统主要差别在于对待数据的方法；**Git 直接记录快照，而非差异比较**。Git 中每一次提交更新或保存项目状态都是对全部文件创建一个快照并保存这个快照的索引；如果文件没有修改，Git 则不再重新存储该文件，而是只保留一个链接指向之前存储的文件。Git 对待数据更像是一个快照流。
+The main difference between Git and other version control systems is the way data is treated; **Git records snapshots directly, not diffs**. Every commit update or save project state in Git creates a snapshot of all files and saves the index of the snapshot; if the file is not modified, Git will not re-store the file, but only keep a link pointing to the previously stored file . Git treats data more like a stream of snapshots.
 
-### 近乎所有操作都是本地执行
+### Almost all operations are performed locally
 
-由于 Git 是分布式版本控制系统，在不对公认中心节点服务器操作的情况下，绝大多数操作都只需要访问本地文件资源。故 Git 大部分操作看起来瞬间完成，不存在网络延时。
+Since Git is a distributed version control system, most operations only need to access local file resources without operating on a recognized central node server. Therefore, most of Git's operations seem to be completed instantly, and there is no network delay.
 
-### Git 保证数据完整性
+### Git guarantees data integrity
 
-Git 中所有的数据在存储前都用 SHA-1 散列（hash，哈希）计算校验和并以哈希值来索引，而不是文件名。这意味着不可能在 Git 不知情时更改任何文件内容或目录内容。
+All data in Git is checksummed with a SHA-1 hash (hash) before being stored and indexed by the hash, not the filename. This means that it is impossible to change any file contents or directory contents without Git's knowledge.
 
 ```shell
-// SHA-1 哈希
-24b9da6552252987aa493b52f8696cd6d3b00373
+// SHA-1 hash
+24b9da652252987aa493b52f8696cd6d3b00373
 ```
 
-### Git 一般只添加数据
+### Git generally only adds data
 
-因为 Git 一般只添加数据，所以你很难让 Git 执行任何不可逆操作，或者让它以任何方式清除数据。
+Because Git generally only adds data, it's hard for you to get Git to do anything irreversible, or to have it clear data in any way.
 
-### Git 的三种状态
+### Three states of Git
 
-Git 有三种状态，你的文件可能处于其中之一： **已提交（committed）**、**已修改（modified）** 和 **已暂存（staged）**。
+Git has three states, and your files may be in one of them: **committed**, **modified**, and **staged**.
 
--   已修改表示修改了文件，但还没保存到数据库中
--   已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
--   已提交表示数据已经安全地保存在本地数据库中。
+-   Modified means that the file has been modified, but has not been saved to the database
+-   Staged means that the current version of a modified file is marked for inclusion in the next committed snapshot.
+-   Committed means that the data has been safely saved in the local database.
 
-这会让我们的 Git 项目拥有三个阶段：**工作区（Working Directory）**、**暂存区（Staging Area）** 以及 **Git 目录（Repository）**。
+This will give our Git project three phases: **Working Directory**, **Staging Area**, and **Git Directory (Repository)**.
 
--   工作区对项目的某个版本独立提取出来的内容，放在磁盘上供你使用或修改。
--   暂存区（术语：索引）保存了下次将要提交的文件列表信息。
--   Git 目录是 Git 用来保存项目的元数据和对象数据库的地方。
+-   The content extracted independently from a certain version of the project by the workspace is placed on disk for you to use or modify.
+-   The staging area (term: index) holds the list of files to be submitted next.
+-   The Git directory is where Git uses to keep a project's metadata and object database.
 
-所以 Git 的基本工作流程如下：
+So the basic workflow of Git is as follows:
 
-1. 在工作区中修改文件（**已修改**）。
-2. 将你下次想要提交的更改选择性地暂存，这样只会将更改的部分添加到暂存区（**已暂存**）。
-3. 提交更新，找到暂存区的文件，将快照永久性存储到 Git 目录（**已提交**）。
+1. Modify the file in the workspace (**modified**).
+2. Optionally stage the changes you want to commit next time, so that only the changed parts are added to the staging area (**staged**).
+3. Commit the update, find the file in the staging area, and store the snapshot permanently in the Git directory (**committed**).
 
-## 首次运行 Git
+## Running Git for the first time
 
-安装 Git 后要先定制你的 Git 环境，仅需配置一次，升级时保留配置信息。
+After installing Git, you need to customize your Git environment. You only need to configure it once, and keep the configuration information when upgrading.
 
-### Git 配置
+### Git configuration
 
-1. 系统配置：包含系统上每一个用户及其仓库的通用配置。
-2. 全局配置：只针对当前用户，对系统上所有仓库生效。
-3. 仓库配置：仅对当前仓库生效，为默认选项。
+1. System configuration: Contains the general configuration of each user on the system and its warehouse.
+2. Global configuration: only for the current user, effective for all warehouses on the system.
+3. Warehouse configuration: Only valid for the current warehouse, which is the default option.
 
-配置文件作用域采用就近原则，每一个级别会覆盖上一级别的配置。修改不同的配置文件，需要在执行 git config 时传递不同参数。
+The configuration file scope adopts the principle of proximity, and each level will override the configuration of the previous level. To modify different configuration files, you need to pass different parameters when executing git config.
 
 ```shell
 git config --system
@@ -110,32 +110,32 @@ git config --global
 git config --local
 ```
 
-### 用户信息
+### User Info
 
-务必设置用户名和邮件地址，这一点至关重要，因为每一个 Git 提交都会使用这些信息，并且写入到每一次提交中，不可更改。
+It's important to set up a username and email address, because this information is used with every Git commit, and written into every commit, it cannot be changed.
 
 ```shell
 git config --global user.name <user-name>
 git config --global user.email <email@email.com>
 ```
 
-### 查看配置
+### View configuration
 
 ```shell
-// 所有 Git 配置
+// all Git configuration
 git config --list
 
-// 检查 Git 的某一项配置
+// Check a certain configuration of Git
 git config <key>
 ```
 
-### 获取帮助
+### Get help
 
 ```shell
 git help <verb>
 git <verb> --help
 man git-<verb>
 
-// 简明的帮助文件
+// concise help file
 git <verb> -h
 ```

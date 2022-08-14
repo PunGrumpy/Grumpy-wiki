@@ -5,256 +5,256 @@ sidebar_position: 4
 data: January 13, 2022
 ---
 
-你现在拥有了一个远程 Git 版本库，能为所有开发者共享代码提供服务，在一个本地工作流程下，你也已经熟悉了基本 Git 命令。你现在可以学习如何利用 Git 提供的一些分布式工作流程了。
+You now have a remote Git repository serving code shared by all developers, and you are familiar with basic Git commands in a local workflow. You can now learn how to take advantage of some of the distributed workflows that Git provides.
 
-## 分布式工作流程
+## Distributed Workflow
 
-与传统的集中式版本控制系统（CVCS）相反，Git 的分布式特性使得开发者间的协作变得更加灵活多样。 在集中式系统中，每个开发者就像是连接在集线器上的节点，彼此的工作方式大体相像。 而在 Git 中，每个开发者同时扮演着节点和集线器的角色——也就是说， 每个开发者既可以将自己的代码贡献到其他的仓库中，同时也能维护自己的公开仓库， 让其他人可以在其基础上工作并贡献代码。
+Contrary to traditional centralized version control systems (CVCS), the distributed nature of Git makes collaboration among developers more flexible and diverse. In a centralized system, each developer is like a node connected to a hub that works roughly like each other. In Git, each developer acts as both a node and a hub—that is, each developer can contribute his code to other repositories, while maintaining his own public repository, allowing Others can work on it and contribute code.
 
-### 集中式工作流
+### Centralized Workflow
 
-集中式系统中通常使用的是单点协作模型——集中式工作流。 一个中心集线器，或者说 仓库，可以接受代码，所有人将自己的工作与之同步。 若干个开发者则作为节点，即中心仓库的消费者与中心仓库同步。
+What is commonly used in centralized systems is a single point of collaboration model - centralized workflow. A central hub, or repository, that accepts code and everyone syncs their work with it. Several developers act as nodes, that is, the consumers of the central warehouse are synchronized with the central warehouse.
 
-### 集成管理者工作流
+### Integration Manager Workflow
 
-Git 允许多个远程仓库存在，使得这样一种工作流成为可能：每个开发者拥有自己仓库的写权限和其他所有人仓库的读权限。 这种情形下通常会有个代表“官方”项目的权威的仓库。 要为这个项目做贡献，你需要从该项目克隆出一个自己的公开仓库，然后将自己的修改推送上去。 接着你可以请求官方仓库的维护者拉取更新合并到主项目维护者可以将你的仓库作为远程仓库添加进来，在本地测试你的变更，将其合并入他们的分支并推送回官方仓库。这一流程的工作方式如下所示：
+Git allows multiple remote repositories to exist, enabling a workflow where each developer has write access to his own repository and read access to everyone else's repository. In this case there is usually an authoritative repository representing the "official" project. To contribute to this project, you need to clone a public repository of your own from the project and push your changes there. You can then ask the maintainer of the official repository to pull the update and merge it into the main project. The maintainer can add your repository as a remote, test your changes locally, merge it into their fork and push back to the official repository. This process works as follows:
 
-1. 项目维护者推送到主仓库。
-2. 贡献者克隆此仓库，做出修改。
-3. 贡献者将数据推送到自己的公开仓库。
-4. 贡献者给维护者发送邮件，请求拉取自己的更新。
-5. 维护者在自己本地的仓库中，将贡献者的仓库加为远程仓库并合并修改。
-6. 维护者将合并后的修改推送到主仓库。
+1. The project maintainer pushes to the main repository.
+2. Contributors clone this repository and make changes.
+3. Contributors push data to their own public repositories.
+4. The contributor sends the maintainer an email requesting to pull his own update.
+5. The maintainer adds the contributor's repository as a remote repository in his local repository and merges the changes.
+6. The maintainer pushes the merged changes to the main repository.
 
-### 主管与副主管工作流
+### Supervisor and Deputy Supervisor Workflow
 
-这其实是多仓库工作流程的变种。 一般拥有数百位协作开发者的超大型项目才会用到这样的工作方式，例如著名的 Linux 内核项目。 被称为 副主管（lieutenant） 的各个集成管理者分别负责集成项目中的特定部分。 所有这些副主管头上还有一位称为 主管（dictator） 的总集成管理者负责统筹。 主管维护的仓库作为参考仓库，为所有协作者提供他们需要拉取的项目代码。 整个流程看起来是这样的：
+This is actually a variant of the multi-repository workflow. This way of working is typically used in very large projects with hundreds of collaborating developers, such as the famous Linux kernel project. Various integration managers, called lieutenants, are responsible for specific parts of the integration project. Above all these deputy directors is an overall integration manager called the dictator who is responsible for the overall planning. The supervisor-maintained repository serves as the reference repository, providing all collaborators with the project code they need to pull. The whole process looks like this:
 
-1. 普通开发者在自己的主题分支上工作，并根据 master 分支进行变基。 这里是主管推送的参考仓库的 master 分支。
-2. 副主管将普通开发者的主题分支合并到自己的 master 分支中。
-3. 主管将所有副主管的 master 分支并入自己的 master 分支中。
-4. 最后，主管将集成后的 master 分支推送到参考仓库中，以便所有其他开发者以此为基础进行变基。
+1. Ordinary developers work on their own topic branches and rebase from the master branch. Here is the master branch of the reference repository for supervisor pushes.
+2. The deputy director merges the topic branch of the regular developer into his own master branch.
+3. The supervisor merges the master branch of all deputy supervisors into his own master branch.
+4. Finally, the supervisor pushes the integrated master branch into the reference repository so that all other developers can rebase from it.
 
-## 向一个项目贡献
+## Contribute to a project
 
-描述如何向一个项目贡献的主要困难在于完成贡献有很多不同的方式。 因为 Git 非常灵活，人们可以通过不同的方式来一起工作，所以描述应该如何贡献并不是非常准确——每一个项目都有一点儿不同。 影响因素包括活跃贡献者的数量、选择的工作流程、提交权限与可能包含的外部贡献方法。
+The main difficulty in describing how to contribute to a project is that there are many different ways of doing it. Because Git is so flexible and people can work together in different ways, it's not very accurate to describe how contributions should be made - every project is a little bit different. Influencing factors include the number of active contributors, chosen workflow, commit permissions, and possible external contribution methods.
 
-第一个影响因素是**活跃贡献者的数量**——积极地向这个项目贡献代码的用户数量以及他们的贡献频率。 在许多情况下，你可能会有两三个开发者一天提交几次，对于不活跃的项目可能更少。 对于大一些的公司或项目，开发者的数量可能会是上千，每天都有成百上千次提交。这很重要，因为随着开发者越来越多，在确保你的代码能干净地应用或轻松地合并时会遇到更多问题。 提交的改动可能表现为过时的，也可能在你正在做改动或者等待改动被批准应用时被合并入的工作严重损坏。 如何保证代码始终是最新的，并且提交始终是有效的？
+The first influencing factor is the number of active contributors - the number of users actively contributing code to the project and how often they contribute. In many cases you may have two or three developers committing several times a day, maybe even less for inactive projects. For larger companies or projects, the number of developers may be in the thousands, with hundreds or thousands of commits per day. This is important because as you get more developers, you will have more problems making sure your code can be applied cleanly or merged easily. Committed changes can appear outdated, or they can be severely damaged by merged work while you are making changes or waiting for them to be approved for application. How can I guarantee that the code is always up to date and the commits are always valid?
 
-下一个影响因素是**项目使用的工作流程**。 它是中心化的吗，即每一个开发者都对主线代码有相同的写入限？项目是否有一个检查所有补丁的维护者或整合者？ 是否所有的补丁是同行评审后批准的？ 你是否参与了那个过程？ 是否存在副官系统，你必须先将你的工作提交到上面？
+The next factor is the **workflow used by the project**. Is it centralized, i.e. every developer has the same limit on writing to mainline code? Does the project have a maintainer or integrator who checks all patches? Are all patches approved after peer review? Are you involved in that process? Is there a system of lieutenants to which you must submit your work first?
 
-下一个影响因素是**提交权限**。 是否有项目的写权限会使向项目贡献所需的流程有极大的不同。 如果没有写权限，项目会选择何种方式接受贡献的工作？ 是否甚至有一个如何贡献的规范？ 你一次贡献多少工作？ 你多久贡献一次？
+The next factor is **commit permissions**. Having write access to a project makes a huge difference in the process required to contribute to a project. How would a project choose to accept contributed work without write access? Is there even a specification for how to contribute? How much work do you contribute at one time? How often do you contribute?
 
-### 提交准则
+### Submission Guidelines
 
 ```shell
-首字母大写的摘要（不多于 50 个字符）
+Capitalized abstract (50 characters or less)
 
-如果必要的话，加入更详细的解释文字。在大概 72 个字符的时候换行。
-在某些情形下，第一行被当作一封电子邮件的标题，剩下的文本作为正文。
-分隔摘要与正文的空行是必须的（除非你完全省略正文），
-如果你将两者混在一起，那么类似变基等工具无法正常工作。
+If necessary, add more detailed explanatory text. Wrap at about 72 characters.
+In some cases, the first line is used as the header of an email, and the rest of the text is used as the body.
+A blank line separating the abstract from the body is required (unless you omit the body entirely),
+Tools like rebasing won't work if you mix the two.
 
-使用指令式的语气来编写提交信息：使用“Fix bug”而非“Fixed bug”或“Fixes bug”。
-此约定与 git merge 和 git revert 命令生成提交说明相同。
+Write commit messages in an imperative tone: use "Fix bug" instead of "Fixed bug" or "Fixes bug".
+This convention is the same as the git merge and git revert commands to generate commit instructions.
 
-空行接着更进一步的段落。
+Blank lines follow further paragraphs.
 
-- 标号也是可以的。
+- Labels are also possible.
 
-- 项目符号可以使用典型的连字符或星号，后跟一个空格，行之间用空行隔开，
- 但是可以依据不同的惯例有所不同。
+- Bullets can use the typical hyphen or asterisk, followed by a space, with blank lines between lines,
+ But it can vary according to different conventions.
 
-- 使用悬挂式缩进
+- Use hanging indents
 ```
 
-### 私有小型团队
+### Private small team
 
-私有小型团队通常由两个以上开发者，工作流程相对简单：
+Private small teams usually consist of more than two developers, and the workflow is relatively simple:
 
-1. 开发者 John，克隆了仓库，做了改动，然后本地提交。
+1. Developer John, cloned the repository, made changes, and committed it locally.
 
-2. 开发者 Jessica，做了同样的事情——克隆仓库并提交了一个改动：
+2. Developer Jessica, did the same thing - cloned the repository and committed a change:
 
-3. Jessica 把她的工作推送到服务器上，一切正常。
+3. Jessica pushes her work to the server and everything works fine.
 
-4. John 稍候也做了些改动，将它们提交到了本地仓库中，然后试着将它们推送到同一个服务器。
+4. John makes some changes later, commits them to the local repository, and then tries to push them to the same server.
 
-5. 这时 John 会推送失败，因为之前 Jessica 已经推送了她的更改。
+5. At this point John will fail the push because Jessica has already pushed her changes.
 
-6. 因为 John 必须先抓取 Jessica 的上游改动并将它们合并到自己的本地仓库中，才能被允许推送。
+6. Because John has to grab Jessica's upstream changes and merge them into his local repository before he is allowed to push.
 
-7. 第一步，John 抓取 Jessica 的工作。
+7. In the first step, John grabs Jessica's work.
 
-8. 第二步，John 合并工作。
-
-…………
-
-### 私有管理团队
-
-型私有团队中贡献者基于特性进行协作，而这些团队的贡献将会由其他人整合。
-
-1. John 与 Jessica 在一个特性分支（featureA）上工作。
-2. Jessica 同时与第三个开发者 Josie 在第二个特性分支（featureB）上工作。
-3. 公司使用了一种整合-管理者工作流程，独立小组的工作只能被特定的工程师整合， 主仓库的 master 分支只能被那些工程师更新。
-4. 在这种情况下，所有的工作都是在基于团队的分支上完成的，并且稍后会被整合者拉到一起。
+8. In the second step, John merges the work.
 
 …………
 
-### 派生的公开项目
+### Private management team
 
-第一个例子描述在支持简单派生的 Git 托管上使用派生来做贡献。 许多托管站点支持这个功能（包括 GitHub、BitBucket、repo.or.cz 等等），许多项目维护者期望这种风格的贡献。
+Contributors collaborate on feature-based private teams, and the contributions of these teams will be integrated by others.
 
-第二个例子会讨论偏好通过邮件接受贡献补丁的项目。
+1. John and Jessica work on a feature branch (featureA).
+2. Jessica is simultaneously working on the second feature branch (featureB) with the third developer, Josie.
+3. The company uses an integration-manager workflow where the work of independent groups can only be integrated by specific engineers, and the master branch of the main repository can only be updated by those engineers.
+4. In this case, all work is done on team-based branches and later pulled together by the integrator.
 
-### 通过 Fork 的公开项目
+…………
 
-首先，你可能想要克隆主仓库，为计划贡献的补丁或补丁序列创建一个主题分支，然后在那儿做工作。
+### Derived public projects
+
+The first example describes using fork to contribute on a Git hosting that supports simple fork. Many hosting sites support this feature (including GitHub, BitBucket, repo.or.cz, etc.), and many project maintainers expect this style of contribution.
+
+The second example discusses projects that prefer to accept contributed patches via email.
+
+### Public projects via Fork
+
+First, you might want to clone the main repository, create a topic branch for the patch or sequence of patches you plan to contribute, and then do work there.
 
 ```shell
-// 克隆远程仓库
+// clone the remote repository
 git clone <url>
 
-// 切换至项目目录
+// switch to the project directory
 cd project
 
-// 创建并切换至特性分支
+// Create and switch to feature branch
 git checkout -b featureA
 
-// ... 工作 ...
+// ... Work...
 git commit
 
-// ... 工作 ...
+// ... Work...
 git commit
 ```
 
-当你的分支工作完成后准备将其贡献回维护者，去原始项目中然后点击 Fork 按钮，创建一份自己的可写的项目派生仓库。 然后需要在本地仓库中将该仓库添加为一个新的远程仓库，在本例中称作 myfork：
+When your fork work is done and ready to contribute back to the maintainers, go to the original project and hit the Fork button to create your own writable fork of the project. This repository then needs to be added as a new remote repository in the local repository, in this case called myfork:
 
 ```shell
-// 添加 fork 仓库
+// add fork repository
 git remote add myfork <url>
 
-// 推送特性分支
+// push feature branch
 git push -u myfork featureA
 ```
 
-当工作已经被推送到你的派生仓库后，你需要通知原项目的维护者你有想要他们合并的工作。 这通常被称作一个 拉取请求（Pull Request），**你通常可以通过网站生成它**。也可以运行 git request-pull 命令然后将随后的输出通过电子邮件手动发送给项目维护者。
+When the work has been pushed to your fork repository, you need to notify the maintainers of the original project that you have work you want them to merge. This is usually called a pull request, and you can usually generate it through the website. It is also possible to run the git request-pull command and then manually email the subsequent output to the project maintainer.
 
-在一个你不是维护者的项目上，通常有一个总是跟踪 origin/master 的 master 分支会很方便，在主题分支上做工作是因为如果它们被拒绝时你可以轻松地丢弃。 如果同一时间主仓库移动了然后你的提交不再能干净地应用，那么使工作主题独立于主题分支也会使你变基（rebase）工作时更容易。
+On a project where you're not the maintainer, it's often convenient to have a master branch that always tracks origin/master, doing work on topic branches because you can easily discard them if they get rejected. Keeping the working topic separate from the topic branch will also make it easier to rebase your work if at the same time the main repo moves and your commits no longer apply cleanly.
 
-例如，你想要提供第二个特性工作到项目，不要继续在刚刚推送的主题分支上工作——从主仓库的 master 分支重新开始：
+For example, if you want to contribute second feature work to the project, don't continue working on the topic branch you just pushed - start over from the master branch of the main repository:
 
-### 通过邮件的公开项目
+### Public items by mail
 
-首先，你要克隆主仓库，然后在那儿做工作。
+First, you clone the main repository, and then do your work there.
 
 ```shell
-// 克隆远程仓库
+// clone the remote repository
 git clone <url>
 
-// 切换至项目目录
+// switch to the project directory
 cd project
 
-// 创建并切换至特性分支
+// Create and switch to feature branch
 git checkout -b topicA
 
-// ... 工作 ...
+// ... Work...
 git commit
 
-// ... 工作 ...
+// ... Work...
 git commit
 ```
 
-现在有两个提交要发送到邮件列表。 使用 git format-patch 来生成可以邮寄到列表的 mbox 格式的文件——它将每一个提交转换为一封电子邮件，提交信息的第一行作为主题，剩余信息与提交引入的补丁作为正文。
+There are now two submissions to be sent to the mailing list. Use git format-patch to generate a file in mbox format that can be mailed to the list - it converts each commit into an email with the first line of the commit message as the subject and the rest of the information and the patch introduced by the commit as the body.
 
 ```shell
 git format-patch -M origin/master
 
-// 补丁文件
+// patch file
 <file-name>.patch
 <file-name>.patch
 ```
 
-为了将其邮寄到邮件列表，你既可以将文件粘贴进电子邮件客户端，也可以通过命令行程序发送它。
+To post it to the mailing list, you can either paste the file into an email client or send it through a command line program.
 
 ```shell
-// 本地邮件服务器设置正确的前提下，使用此命令。
+// Use this command under the premise that the local mail server is set correctly.
 git send-email <file-name>.patch
 ```
 
-## 维护项目
+## Maintenance project
 
-除了如何有效地参与一个项目的贡献之外，你可能也需要了解如何维护项目。 这包含接受并应用别人使用 format-patch 生成并通过电子邮件发送过来的补丁，或对项目添加的远程版本库分支中的更改进行整合。 但无论是管理版本库，还是帮忙验证、审核收到的补丁，都需要同其他贡献者约定某种长期可持续的工作方式。
+In addition to how to effectively contribute to a project, you may also need to understand how to maintain the project. This includes accepting and applying patches generated by others using format-patch and emailed, or integrating changes in remote repository branches added to the project. But whether it is managing the repository, or helping to verify and review the patches received, you need to agree with other contributors on a long-term sustainable way of working.
 
-### 在主题分支中工作
+### Work in topic branch
 
-如同本地新建一个特性分支一般。在添加贡献者的提交分支通过本地测试后，就可以考虑是否将其合并到长期分支中了。
+It's like creating a new feature branch locally. After adding a contributor's commit branch passes local tests, it's time to consider whether to merge it into the long-term branch.
 
-### 应用来自邮件的补丁
+### Apply the patch from the mail
 
-#### 使用 apply 命令应用补丁
+#### Apply the patch using the apply command
 
-如果你收到了一个使用 git diff 或 Unix diff 命令的变体（不推荐使用这种方式，具体见下一小节） 创建的补丁，可以使用 git apply 命令来应用。 假设你将补丁保存在了 /tmp/patch-ruby-client.patch 中，可以这样应用补丁：
+If you have received a patch that was created using a variant of git diff or the Unix diff command (which is not recommended, see the next section), you can use the git apply command to apply it. Assuming you saved the patch in /tmp/patch-ruby-client.patch, you can apply the patch like this:
 
 ```shell
 git apply /tmp/patch-ruby-client.patch
 ```
 
-#### 使用 am 命令应用补丁
+#### Apply the patch using the am command
 
-如果补丁的贡献者也是一个 Git 用户，并且其能熟练使用 format-patch 命令来生成补丁，这样的话你的工作会变得更加轻松，因为这种补丁中包含了作者信息和提交信息供你参考。
+If the contributor of the patch is also a Git user and is proficient in using the format-patch command to generate the patch, your job will be much easier because the patch contains author and commit information for your reference.
 
-要应用一个由 format-patch 命令生成的补丁，你应该使用 git am 命令。
+To apply a patch generated by the format-patch command, you should use the git am command.
 
 ```shell
 git am <file-name>.patch
 ```
 
-#### 检出远程分支
+#### checkout remote branch
 
-如果你的贡献者建立了自己的版本库，并且向其中推送了若干修改， 之后将版本库的 URL 和包含更改的远程分支发送给你，那么你可以将其添加为一个远程分支，并且在本地进行合并。
+If your contributor builds his own repository, pushes several changes to it, and then sends you the URL of the repository and the remote branch containing the changes, you can add it as a remote branch and have it locally Merge.
 
-### 将贡献的工作整合进来
+### Integrate contributed work
 
-#### 合并工作流
+#### Merge Workflow
 
-一种基本的工作流就是将所有的工作直接合并到 master 分支。 在这种情况下，master 分支包含的代码是基本稳定的。 当你完成某个主题分支的工作，或审核通过了其他人所贡献的工作时，你会将其合并进入 master 分支，之后将主题分支删除，如此反复。
+A basic workflow is to merge all work directly into the master branch. In this case, the code contained in the master branch is basically stable. When you finish work on a topic branch, or approve work contributed by others, you merge it into the master branch, then delete the topic branch, and so on.
 
-#### 大项目合并工作流
+#### Large project merge workflow
 
-Git 项目包含四个长期分支：master、next，用于新工作的 pu（proposed updates）和用于维护性向后移植工作（maintenance backports）的 maint 分支。 贡献者的新工作会以类似之前所介绍的方式收入主题分支中（见 管理复杂的一系列接收贡献的平行主题分支。）。 之后对主题分支进行测试评估，检查其是否已经能够合并，或者仍需要更多工作。 安全的主题分支会被合并入 next 分支，之后该分支会被推送使得所有人都可以尝试整合到一起的特性。
+The Git project contains four long-term branches: master, next, pu (proposed updates) for new work, and maint for maintenance backports. Contributors' new work is included in topic branches in a manner similar to that described previously (see Managing a complex series of parallel topic branches receiving contributions.). The topic branch is then tested and evaluated to see if it has been merged, or if it still needs more work. Safe topic branches are merged into the next branch, which is then pushed so that everyone can try to integrate the features together.
 
-#### 变基与拣选工作流
+#### Rebasing and Picking Workflow
 
-为了保持线性的提交历史，有些维护者更喜欢在 master 分支上对贡献过来的工作进行变基和拣选，而不是直接将其合并。 当你完成了某个主题分支中的工作，并且决定要将其整合的时候，你可以在该分支中运行变基命令， 在当前 master 分支（或者是 develop 等分支）的基础上重新构造修改。
+In order to maintain a linear commit history, some maintainers prefer to rebase and cherry-pick contributed work on the master branch rather than merge it directly. When you've finished work on a topic branch and decide to integrate it, you can run the rebase command in that branch to rebuild the changes based on the current master branch (or a branch such as develop).
 
-#### 为发布打标签
+#### Tag a release
 
-当你决定进行一次发布时，你可能想要打一个标签，这样在之后的任何一个提交点都可以重新创建该发布。
+When you decide to make a release, you may want to tag it so that the release can be recreated at any later commit point.
 
-#### 生成一个构建号
+#### Generate a build number
 
-Git 中不存在随每次提交递增的 v123 之类的数字序列，如果你想要为提交附上一个可读的名称， 可以对其运行 git describe 命令。作为回应，Git 将会生成一个字符串， 它由最近的标签名、自该标签之后的提交数目和你所描述的提交的部分 SHA-1 值（前缀的 g 表示 Git）构成：
+There is no sequence of numbers in Git like v123 that increments with each commit, if you want to give a commit a human-readable name, you can run the git describe command on it. In response, Git will generate a string consisting of the name of the most recent tag, the number of commits since that tag, and the partial SHA-1 value of the commit you describe (prefixed with g for Git):
 
 ```shell
 git describe master
 v1.6.2-rc1-20-g8c5b85c
 ```
 
-#### 准备一次发布
+#### Preparing for a release
 
-现在你可以发布一个构建了。 其中一件事情就是为那些不使用 Git 的可怜包们创建一个最新的快照归档。 使用
-git archive 命令完成此工作：
+Now you can publish a build. One of those things is to create an up-to-date snapshot archive for those poor packages that don't use Git. use
+The git archive command does the job:
 
 ```shell
 git archive master > archive.zip
 ```
 
-#### 制作提交简报
+#### Create a Submission Brief
 
-现在是时候通知邮件列表里那些好奇你的项目发生了什么的人了。 使用 git shortlog 命令可以快速生成一份包含从上次发布之后项目新增内容的修改日志（changelog）类文档。
+Now is the time to notify those on the mailing list who are curious about what happened to your project. Use the git short-log command to quickly generate a changelog-like document containing new content to the project since the last release.
 
 ```shell
-// 包括了自 v1.0.1 以来的所有提交
-git shortlog --no-merges master --not v1.0.1
+// includes all commits since v1.0.1
+git short-log --no-merges master --not v1.0.1
 ```
