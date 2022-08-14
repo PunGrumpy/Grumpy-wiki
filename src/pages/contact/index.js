@@ -62,7 +62,7 @@ export default function Home() {
     return (
         <Layout
             // title={`${siteConfig.title}`}
-            title="Home"
+            title="Contact"
             description="Wiki/vscode/javascript"
         >
             {/* <HomepageHeader /> */}
