@@ -10,8 +10,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
     title: 'Grumpy',
     tagline: 'For Freedom',
-    url: 'https://pun-grumpy.vercel.app/',
-    baseUrl: 'https://grumpy-wiki.netlify.app',
+    url: 'https://grumpy-wiki.netlify.app',
+    baseUrl: '/',
     onBrokenLinks: 'log',
     onBrokenMarkdownLinks: 'log',
     favicon: 'img/favicon.ico',
