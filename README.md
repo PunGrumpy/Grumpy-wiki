@@ -12,7 +12,6 @@
 
 ```markdown
 Docuasurus
-├─ blog
 ├─ docs
 ├─ wiki
 │ ├─ dev
