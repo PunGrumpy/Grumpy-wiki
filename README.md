@@ -23,7 +23,7 @@ Docuasurus
 
 -   All **original** content on this site adopts the [GPL-3.0](http://www.thebigfly.com/gnu/FDLv1.3/) agreement.
 
--   All **cited third-party** original content on this site belongs to the original author\*\*. If there is any offense, please [email contact](mailto:admin@7wate.com) to delete it.
+-   All **cited third-party** original content on this site belongs to the original author\*\*. If there is any offense.
 
 -   **Docusaurus** is [MIT licensed.](https://github.com/facebook/docusaurus/blob/main/LICENSE)
 
