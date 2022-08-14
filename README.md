@@ -1,4 +1,4 @@
-# Grumpy Wiki
+# Grumpy Wiki [![Netlify Status](https://api.netlify.com/api/v1/badges/40b00eef-dc45-4b30-a153-b52166784460/deploy-status)](https://app.netlify.com/sites/grumpy-wiki/deploys)
 
 > Always For Freedom.
 >
@@ -6,7 +6,7 @@
 >
 > Records the knowledge here, I hope it will help you.
 
-<!-- ![Site home](image) -->
+![Site home](./static/img/homesite.jpg)
 
 ## Table of contents
 
