@@ -81,7 +81,7 @@ module.exports = {
                 ],
             },
             footer: {
-                style: 'dark',
+                style: 'light',
                 copyright: `Copyright © ${new Date().getFullYear()} PunGrumpy, Inc. Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.<br>Powered by <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>`,
             },
             prism: {
