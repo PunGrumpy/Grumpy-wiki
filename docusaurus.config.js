@@ -9,7 +9,7 @@ const config = {
     title: 'Grumpy',
     tagline: 'For Freedom',
     url: 'https://pun-grumpy.vercel.app/',
-    baseUrl: '/',
+    baseUrl: 'https://grumpy-wiki.netlify.app',
     onBrokenLinks: 'log',
     onBrokenMarkdownLinks: 'log',
     favicon: 'img/favicon.ico',
