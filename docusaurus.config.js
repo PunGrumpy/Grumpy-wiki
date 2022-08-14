@@ -56,7 +56,7 @@ module.exports = {
                 },
             ],
             navbar: {
-                title: "👻 Grumpy's Wiki",
+                title: "Grumpy's Wiki",
                 hideOnScroll: true,
                 logo: {
                     alt: 'Site Logo',
