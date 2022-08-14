@@ -9,7 +9,7 @@ const svgList = [
         title: 'Github',
         Svg: require('../../static/img/github.svg').default,
         color: 'black',
-        link: 'https://github.com/7Wate/wiki',
+        link: 'https://github.com/PunGrumpy/Grumpy-wiki',
     },
     {
         title: 'Instagram',
