@@ -4,33 +4,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HeroImg from '../../static/img/Hero.jpg';
 
-const svgList = [
-    {
-        title: 'Github',
-        Svg: require('../../static/img/github.svg').default,
-        color: 'black',
-        link: 'https://github.com/PunGrumpy/Grumpy-wiki',
-    },
-    {
-        title: 'Instagram',
-        Svg: require('../../static/img/instagram.svg').default,
-        link: 'https://www.instagram.com/wtpp_p114/',
-    },
-    {
-        title: 'Facebook',
-        Svg: require('../../static/img/facebook.svg').default,
-        color: '#2979ff',
-        link: 'https://www.facebook.com/lnoppakornl.lkaewsalabnill',
-    },
-];
-const Svg = ({ Svg, color, title, link }) => {
-    return (
-        <a href={link} target="_blank">
-            <Svg className={styles.svg} style={{ fill: color }} />
-        </a>
-    );
-};
-
 function MyHero() {
     return (
         <div className={styles.myHeroContainer}>
@@ -39,16 +12,19 @@ function MyHero() {
                     Always <br /> For Freedom.
                 </h1>
                 <p className={styles.leftContainer_p}>
-                    A guy who frustrated with coding 💨
+                    A guy who tried of coding 💨
                     <br />
                     Records the knowledge here, I hope it will help you.
                 </p>
                 <div className={styles.buttonContainer}>
-                    <div className={styles.svgContainer}>
-                        {svgList.map((item, index) => {
-                            return <Svg {...item} key={item.title} />;
-                        })}
-                    </div>
+                    <button className={styles.button}>
+                        <a className={styles.hero_a} href="/dev">
+                            Click
+                        </a>
+                    </button>
+                    <span className={styles.buttonLeftText}>
+                        Get Started. <br /> Start a learning journey.
+                    </span>
                 </div>
             </div>
             <div className={styles.rightContainer}>
