@@ -5,7 +5,9 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+// const config = {};
+
+module.exports = {
     title: 'Grumpy',
     tagline: 'For Freedom',
     url: 'https://pun-grumpy.vercel.app/',
@@ -90,5 +92,3 @@ const config = {
             },
         }),
 };
-
-module.exports = { config };
