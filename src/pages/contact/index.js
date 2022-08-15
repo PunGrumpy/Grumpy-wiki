@@ -9,23 +9,23 @@ const svgList = [
         title: 'Github',
         Svg: require('../../../static/img/contact/github.svg').default,
         color: '#000',
-        link: 'https://github.com/PunGrumpy/Grumpy-wiki',
+        _link: 'https://github.com/PunGrumpy/Grumpy-wiki',
     },
     {
         title: 'Instagram',
         Svg: require('../../../static/img/contact/instagram.svg').default,
-        link: 'https://www.instagram.com/wtpp_p114/',
+        _link: 'https://www.instagram.com/wtpp_p114/',
     },
     {
         title: 'Facebook',
         Svg: require('../../../static/img/contact/facebook.svg').default,
         color: '#2979ff',
-        link: 'https://www.facebook.com/lnoppakornl.lkaewsalabnill',
+        _link: 'https://www.facebook.com/lnoppakornl.lkaewsalabnill',
     },
 ];
-const Svg = ({ Svg, color, title, link }) => {
+const Svg = ({ Svg, color, title, _link }) => {
     return (
-        <a href={link} target="_blank">
+        <a href={_link} target="_blank">
             <Svg className={styles.svg} style={{ fill: color }} />
         </a>
     );
