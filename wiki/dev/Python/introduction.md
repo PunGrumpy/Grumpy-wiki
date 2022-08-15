@@ -9,11 +9,9 @@ This chapter introduced what you know before getting start with Python. Python i
 
 Python programs are concise, easy to read and generally much shorter than C, C++ and Java code that implements the same functionality, for the following reason:
 
-- Advanced data types allow complex operations to expressed in a single statement
-- Use indentation instead of parentheses to group code blocks
-- No need predeclare variables or parameters
-
-# Run
+-   Advanced data types allow complex operations to expressed in a single statement
+-   Use indentation instead of parentheses to group code blocks
+-   No need pre-declare variables or parameters
 
 ## Installation
 
