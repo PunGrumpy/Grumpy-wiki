@@ -23,6 +23,21 @@ data: August 15, 2022
 
     > Boolean values ​​have only two values, `True` and `False`, either `True` or `False`. In Python, you can directly use `True` and `False` to represent boolean values ​​(please note case), can also be computed by boolean operations (e.g. `3 < 5` yields a boolean `True`, while `2 == 1` yields a boolean `False`).
 
+    -   False-y VS Truthy
+
+        -   False-y
+
+            -   0.0
+            -   0
+            -   None
+            -   range(0)
+            -   Empty string
+            -   Empty data structure
+
+        -   Truthy
+
+            -   Every thing else
+
 ### Variable Naming
 
 **Hard rules**
