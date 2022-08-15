@@ -56,17 +56,17 @@ module.exports = {
                 },
             ],
             navbar: {
-                title: "👻 Grumpy's Wiki",
+                title: "Grumpy's Wiki",
                 hideOnScroll: true,
-                // logo: {
-                //     alt: 'Site Logo',
-                //     src: 'img/ghost.png',
-                //     srcDark: 'img/ghost-dark.png',
-                //     href: 'https://grumpy-wiki.netlify.app/',
-                //     target: '_self',
-                //     width: 32,
-                //     height: 32,
-                // },
+                logo: {
+                    alt: 'Site Logo',
+                    src: 'img/logo.png',
+                    srcDark: 'img/logo-dark.png',
+                    href: 'https://grumpy-wiki.netlify.app/',
+                    target: '_self',
+                    width: 32,
+                    height: 32,
+                },
                 items: [
                     {
                         position: 'right',

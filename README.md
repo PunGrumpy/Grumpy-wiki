@@ -33,3 +33,5 @@ Docuasurus
 ## Thanks
 
 Feel the official maintenance and development of Docusaurus!
+
+<a href="https://www.freepik.com/vectors/ghost">Ghost vector created by pikisuperstar by www.freepik.com</a>
