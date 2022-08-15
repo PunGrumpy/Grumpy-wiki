@@ -73,41 +73,41 @@ Operators are special characters in Python that perform operation on value(s)
 
 ## Keywords
 
-| Keyword  | Description                                                                             |
-| :------- | :-------------------------------------------------------------------------------------- |
-| and      | logical operators.                                                                      |
-| as       | Create an alias.                                                                        |
-| assert   | for debugging.                                                                          |
-| break    | Break out of the loop.                                                                  |
-| class    | Defines the class.                                                                      |
-| continue | Continue the next iteration of the loop.                                                |
-| def      | Defines a function.                                                                     |
-| del      | Deletes an object.                                                                      |
-| elif     | Used in conditional statements, equivalent to else if.                                  |
-| else     | is used for conditional statements.                                                     |
-| except   | Handle exceptions, what to do when exceptions occur.                                    |
-| False    | Boolean, the result of the comparison operation.                                        |
-| finally  | Handles an exception and executes a piece of code whether or not there is an exception. |
-| for      | Creates a for loop.                                                                     |
-| from     | Import a specific part of a module.                                                     |
-| global   | Declare global variables.                                                               |
-| if       | Write a conditional statement.                                                          |
-| import   | Import a module.                                                                        |
-| in       | Checks if a value exists in a list, tuple, etc. collection.                             |
-| is       | Tests whether two variables are equal.                                                  |
-| lambda   | Creates an anonymous function.                                                          |
-| None     | Indicates a null value.                                                                 |
-| nonlocal | Declare non-local variables.                                                            |
-| not      | Logical operator.                                                                       |
-| or       | Logical operator.                                                                       |
-| pass     | null statement, a statement that does nothing.                                          |
-| raise    | Raise an exception.                                                                     |
-| return   | Exit the function and return the value.                                                 |
-| True     | Boolean, the result of the comparison operation.                                        |
-| try      | Write a try...except statement.                                                         |
-| while    | Creates a while loop.                                                                   |
-| with     | is used to simplify exception handling.                                                 |
-| yield    | End function, return generator.                                                         |
+| Keyword    | Description                                                                             |
+| :--------- | :-------------------------------------------------------------------------------------- |
+| `and`      | logical operators.                                                                      |
+| `as`       | Create an alias.                                                                        |
+| `assert`   | for debugging.                                                                          |
+| `break`    | Break out of the loop.                                                                  |
+| `class`    | Defines the class.                                                                      |
+| `continue` | Continue the next iteration of the loop.                                                |
+| `def`      | Defines a function.                                                                     |
+| `del`      | Deletes an object.                                                                      |
+| `elif`     | Used in conditional statements, equivalent to else if.                                  |
+| `else`     | is used for conditional statements.                                                     |
+| `except`   | Handle exceptions, what to do when exceptions occur.                                    |
+| `False`    | Boolean, the result of the comparison operation.                                        |
+| `finally`  | Handles an exception and executes a piece of code whether or not there is an exception. |
+| `for`      | Creates a for loop.                                                                     |
+| `from`     | Import a specific part of a module.                                                     |
+| `global`   | Declare global variables.                                                               |
+| `if`       | Write a conditional statement.                                                          |
+| `import`   | Import a module.                                                                        |
+| `in`       | Checks if a value exists in a list, tuple, etc. collection.                             |
+| `is`       | Tests whether two variables are equal.                                                  |
+| `lambda`   | Creates an anonymous function.                                                          |
+| `None`     | Indicates a null value.                                                                 |
+| `nonlocal` | Declare non-local variables.                                                            |
+| `not`      | Logical operator.                                                                       |
+| `or`       | Logical operator.                                                                       |
+| `pass`     | null statement, a statement that does nothing.                                          |
+| `raise`    | Raise an exception.                                                                     |
+| `return`   | Exit the function and return the value.                                                 |
+| `True`     | Boolean, the result of the comparison operation.                                        |
+| `try`      | Write a try...except statement.                                                         |
+| `while`    | Creates a while loop.                                                                   |
+| `with`     | is used to simplify exception handling.                                                 |
+| `yield`    | End function, return generator.                                                         |
 
 ## Comments
 
