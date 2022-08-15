@@ -2,7 +2,7 @@
 
 > Always For Freedom.
 >
-> A guy who tried of coding 💨
+> A guy who exhausted with coding 💨
 >
 > Records the knowledge here, I hope it will help you.
 
