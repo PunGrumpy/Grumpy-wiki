@@ -1,5 +1,5 @@
 ---
-id: data-structure
+id: Data-structure
 title: Data Structure
 sidebar_position: 5
 data: August 15, 2022
