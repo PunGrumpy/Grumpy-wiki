@@ -12,7 +12,7 @@ function MyHero() {
                     Always <br /> For Freedom.
                 </h1>
                 <p className={styles.leftContainer_p}>
-                    A guy who tried of coding 💨
+                    A guy who exhausted with coding 💨
                     <br />
                     Records the knowledge here, I hope it will help you.
                 </p>
