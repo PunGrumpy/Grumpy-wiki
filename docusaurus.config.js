@@ -70,7 +70,7 @@ module.exports = {
                 items: [
                     {
                         position: 'right',
-                        label: '👨🏻‍🎓 Wiki - dev',
+                        label: '👨🏻‍🎓 Programming Languages',
                         to: '/dev',
                     },
                     {
