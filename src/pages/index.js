@@ -9,7 +9,7 @@ function MyHero() {
         <div className={styles.myHeroContainer}>
             <div className={styles.leftContainer}>
                 <h1 className={styles.leftContainer_h1}>
-                    Always <br /> For Freedom.
+                    Freedom <br /> Through Education.
                 </h1>
                 <p className={styles.leftContainer_p}>
                     A guy who exhausted with coding 💨
