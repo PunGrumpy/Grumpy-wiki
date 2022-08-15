@@ -79,6 +79,14 @@ print(sum)
 
 Can be used to construct a range from 1 to 100. When we put such a range into a `for-in` loop, we can take out the range from 1 to 100 in turn through the previous loop variable `x` the integer. Of course, the usage of `range` is very flexible, an example is given below:
 
+```py
+for num in range(start, stop, Step):
+    # _1 : Start
+    # _2 : Stop
+    # _3 : Step (default is 1)
+    print(num)
+```
+
 -   `range(101)`
     > It can be used to generate integers in the range of 0 to 100. It should be noted that 101 cannot be obtained.
 -   `range(1, 101)`
