@@ -53,6 +53,7 @@ module.exports = {
                 {
                     name: 'keywords',
                     content: 'PunGrumpy, wiki, blog, java, python, javascript',
+                    image: 'img/Hero.jpg',
                 },
             ],
             navbar: {
