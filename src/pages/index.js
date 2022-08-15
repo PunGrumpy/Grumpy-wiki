@@ -18,7 +18,7 @@ function MyHero() {
                 </p>
                 <div className={styles.buttonContainer}>
                     <button className={styles.button}>
-                        <a className={styles.hero_a} href="/dev">
+                        <a className={styles.hero_a} href="/programming-languages">
                             Click
                         </a>
                     </button>
