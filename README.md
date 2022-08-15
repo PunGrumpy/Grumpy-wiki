@@ -14,7 +14,7 @@
 Docuasurus
 ├─ docs
 ├─ wiki
-│ ├─ dev
+│ ├─ programming languages
 └─ contact
 ```
 
