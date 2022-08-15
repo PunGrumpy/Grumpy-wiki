@@ -35,9 +35,9 @@ module.exports = {
         [
             '@docusaurus/plugin-content-docs',
             {
-                id: 'dev',
-                path: 'wiki/dev',
-                routeBasePath: 'dev',
+                id: 'programming-languages',
+                path: 'wiki/programming-languages',
+                routeBasePath: 'programming-languages',
                 sidebarPath: require.resolve('./sidebars.js'),
                 editUrl: 'https://github.com/PunGrumpy/Grumpy-wiki/tree/main/',
                 showLastUpdateAuthor: true,
@@ -71,7 +71,7 @@ module.exports = {
                     {
                         position: 'right',
                         label: '👨🏻‍🎓 Programming Languages',
-                        to: '/dev',
+                        to: '/programming-languages',
                     },
                     {
                         position: 'right',
