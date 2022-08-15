@@ -1,5 +1,5 @@
 ---
-id: Basic Grammar
+id: Basic-Grammar
 title: Basic Grammar
 sidebar_position: 2
 data: August 15, 2022
@@ -47,7 +47,7 @@ Use type() to check the type of a variable
 -   `chr()`: Convert an integer to a string (one character) corresponding to the encoding.
 -   `ord()`: Convert a string (a character) to the corresponding encoding (integer).
 
-## Operator
+## Operators
 
 Operators are special characters in Python that perform operation on value(s)
 

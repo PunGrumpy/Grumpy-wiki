@@ -1,5 +1,5 @@
 ---
-id: Common Command
+id: Common-Command
 title: Common Command
 sidebar_position: 6
 data: June 16, 2022
