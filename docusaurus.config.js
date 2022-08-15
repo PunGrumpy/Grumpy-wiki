@@ -53,7 +53,19 @@ module.exports = {
                 {
                     name: 'keywords',
                     content: 'PunGrumpy, wiki, blog, java, python, javascript',
-                    image: 'img/Hero.jpg',
+                },
+                {
+                    name: 'og:title',
+                    content: 'Grumpy-wiki',
+                },
+                {
+                    name: 'og:description',
+                    content: 'Personal knowledge base',
+                },
+                {
+                    name: 'og:image',
+                    content:
+                        'https://raw.githubusercontent.com/PunGrumpy/Grumpy-wiki/main/static/img/Hero.jpg',
                 },
             ],
             navbar: {
