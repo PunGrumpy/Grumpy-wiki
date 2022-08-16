@@ -2,6 +2,7 @@
 slug: what-is-big-data
 title: What Is Big Data?
 authors: grumpy
+tag: [big data]
 ---
 
 ## Big Data

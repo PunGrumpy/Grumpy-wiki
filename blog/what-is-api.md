@@ -2,6 +2,7 @@
 slug: what-is-api
 title: What Is API?
 authors: grumpy
+tag: [api]
 ---
 
 ## Application Programming Interface (API)
@@ -21,7 +22,6 @@ These APIs are not publicly available, so you need specific rights or licenses t
 ### Internal APIs
 
 Internal or private. These APIs are developed by companies to use in their internal system. It helps you to enhance the productivity of your teams
-
 
 ### Composite APIs
 
