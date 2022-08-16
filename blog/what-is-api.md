@@ -20,7 +20,7 @@ These APIs are not publicly available, so you need specific rights or licenses t
 
 ### Internal APIs
 
-Intrnal or private. These APIs are developed by companies to use in their internal system. It helps you to enhance the productivity of your teams
+Internal or private. These APIs are developed by companies to use in their internal system. It helps you to enhance the productivity of your teams
 
 
 ### Composite APIs
