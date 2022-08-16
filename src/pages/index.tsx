@@ -2,9 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-
-// Cannot find module '../../static/img/Hero.jpg' or its corresponding type declarations. tsx
-// import HeroImg from '../../static/img/Hero.jpg';
+import HeroImg from '../../static/img/Hero.jpg';
 
 function MyHero() {
     return (
@@ -30,7 +28,7 @@ function MyHero() {
                 </div>
             </div>
             <div className={styles.rightContainer}>
-                <img src="../../static/img/Hero.jpg" alt="HeroImg" />
+                <img src={HeroImg} alt="HeroImg" />
             </div>
         </div>
     );
