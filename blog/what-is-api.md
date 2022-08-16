@@ -15,18 +15,18 @@ API is a software interface that allows two applications to interact with each o
 
 ## Type Of APIs
 
-### Open APIs
+-   ### Open APIs
 
 Also knows as Public APIs. These APIs are publicly available and there are no restrictions to access them
 
-### Partner APIs
+-   ### Partner APIs
 
 These APIs are not publicly available, so you need specific rights or licenses to access them
 
-### Internal APIs
+-   ### Internal APIs
 
 Internal or private. These APIs are developed by companies to use in their internal system. It helps you to enhance the productivity of your teams
 
-### Composite APIs
+-   ### Composite APIs
 
 This type of API combines different data and service APIs
