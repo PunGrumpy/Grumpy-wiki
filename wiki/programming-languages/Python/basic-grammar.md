@@ -133,9 +133,6 @@ Operators are special characters in Python that perform operation on value(s)
 ```python
 """
 First Python program - hello, world!
-Tribute to the great Mr. Dennis M. Ritchie
-Version: 0.1
-Author: Luo Hao
 """
 # hello world!
 print('hello, world!')
