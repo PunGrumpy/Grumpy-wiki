@@ -39,7 +39,7 @@ function MyHero() {
                     Pun <br /> Grumpy 👻
                 </h1>
                 <p className={styles.leftContainer_p}>
-                    Hello, I'm a student computer science based in Thailand! 👨🏻‍💻
+                    Hello, I'm a student based in Thailand! 👨🏻‍💻
                     <br />
                     Undergraduate student - Computer Science
                 </p>
