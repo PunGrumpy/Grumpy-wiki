@@ -25,15 +25,20 @@ module.exports = {
             'classic',
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
+                docs: false,
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
                 blog: {
-                    blogTitle: "PunGrumpy's Blog",
-                    blogDescription: "PunGrumpy's Blog",
+                    blogTitle: "Grumpy's Blog",
+                    blogDescription: "Grumpy's Blog",
                     blogSidebarTitle: 'Latest posts',
                     showReadingTime: true,
-                    postsPerPage: 6,
+                    postsPerPage: 3,
+                    feedOptions: {
+                        type: 'all',
+                        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://pun-grumpy.vercel.app/" target="_blank">PunGrumpy</a>, Inc.`,
+                    },
                 },
             }),
         ],

@@ -31,6 +31,10 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
     background-color: rgba(0, 0, 0, 0.3);
+    --site-color-feedback-background: #f0f8ff;
+    --site-color-favorite-background: #1d1e1e;
+    --site-color-checkbox-checked-bg: hsl(167deg 56% 73% / 10%);
+    --docusaurus-highlighted-code-line-bg: rgb(66 66 66 / 35%);
 }
 
 html {
@@ -62,15 +66,6 @@ html {
   }
 } */
 
-/* html[data-theme="dark"] #airConditioning {
-  padding-left: 30px;
-  border-left: 1px solid var(--ifm-color-emphasis-300);
-  float: right;
-  margin-top: -660px;
-  height: 651px;
-  overflow: hidden;
-} */
-
 hr {
     border: 0.5px solid rgb(245, 244, 244);
     padding: 0;
@@ -80,8 +75,6 @@ hr {
 }
 blockquote {
     transition: all 0.5s ease-in-out;
-    /* background: var(--ifm-color-primary-lighter); */
-    /* border-bottom: #25c2a0 1px solid; */
     background-color: #f8f8f9;
     font-size: 0.9em;
     border-image-source: linear-gradient(to left, #8f41e9, #f8f8f8);
@@ -91,7 +84,6 @@ blockquote {
     border-radius: 5px;
 }
 blockquote:hover {
-    /* border-left: 2px solid var(--ifm-color-primary); */
     border-image-source: linear-gradient(to left, #8f41e9, var(--ifm-color-primary));
     border-image-slice: 1;
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0);
@@ -135,13 +127,13 @@ img-annotation {
 p {
     margin: 15px 0 15px 10px;
 }
-/* 徽章居左 */
+/* badge on the left */
 .Badges {
     display: inline-block !important;
     margin: 0.5rem 0.3rem !important;
 }
 
-/* 公告栏 */
+/* bulletin board */
 div[class^='announcementBar_'] {
     background: repeating-linear-gradient(
         35deg,
@@ -153,12 +145,12 @@ div[class^='announcementBar_'] {
     font-weight: 700;
 }
 
-/* 滚动槽 */
+/* rolling groove */
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
-/* 滚动条滑块 */
+/* scroll bar slider */
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.1);

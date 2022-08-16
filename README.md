@@ -36,3 +36,6 @@ Docuasurus
 Feel the official maintenance and development of Docusaurus!
 
 <a href="https://www.freepik.com/vectors/ghost">Ghost vector created by pikisuperstar by www.freepik.com</a>
+<a href="https://www.freepik.com/psd/3d-character">3d character psd created by jcomp - www.freepik.com</a>
+<a href='https://www.freepik.com/psd/play-game'>Play game psd created by jcomp - www.freepik.com</a>
+<a href='https://www.freepik.com/psd/reality'>Reality psd created by ladaz3d - www.freepik.com</a>

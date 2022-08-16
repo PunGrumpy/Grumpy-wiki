@@ -7,6 +7,8 @@ tag: [api, coding, rest api]
 hide_table_of_contents: false
 ---
 
+![What Is REST API?](../static/img/blog/technology-man-holding-virtual-reality.png)
+
 ## Representational State Transfer (REST)
 
 REST (API) is a way of accessing flexible way without having any processing
