@@ -3,7 +3,7 @@ slug: what-is-big-data
 title: What Is Big Data?
 description: This blog post describe Big data, and covers of the most details Big data
 authors: grumpy
-tag: [big data]
+tag: [big data, coding]
 hide_table_of_contents: false
 ---
 
