@@ -87,6 +87,11 @@ module.exports = {
                         to: '/programming-languages',
                     },
                     {
+                      position: 'right',
+                      label: '📄 Blog',
+                      to: '/blog'
+                    },
+                    {
                         position: 'right',
                         label: '👨🏻 Contact',
                         to: '/contact',
