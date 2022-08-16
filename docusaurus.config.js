@@ -28,6 +28,13 @@ module.exports = {
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
+                blog: {
+                    blogTitle: "PunGrumpy's Blog",
+                    blogDescription: "PunGrumpy's Blog",
+                    blogSidebarTitle: 'Latest posts',
+                    showReadingTime: true,
+                    postsPerPage: 6,
+                },
             }),
         ],
     ],
@@ -87,9 +94,10 @@ module.exports = {
                         to: '/programming-languages',
                     },
                     {
-                      position: 'right',
-                      label: '📄 Blog',
-                      to: '/blog'
+                        position: 'right',
+                        label: '📄 Blog',
+                        to: '/blog',
+                        activeBasePath: 'blog',
                     },
                     {
                         position: 'right',
