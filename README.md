@@ -39,3 +39,5 @@ Feel the official maintenance and development of Docusaurus!
 <a href="https://www.freepik.com/psd/3d-character">3d character psd created by jcomp - www.freepik.com</a>
 <a href='https://www.freepik.com/psd/play-game'>Play game psd created by jcomp - www.freepik.com</a>
 <a href='https://www.freepik.com/psd/reality'>Reality psd created by ladaz3d - www.freepik.com</a>
+<a href='https://www.freepik.com/psd/background'>Background psd created by Ekayasa.Design - www.freepik.com</a>
+<a href="https://www.freepik.com/vectors/teaser">Teaser vector created by pikisuperstar - www.freepik.com</a>
