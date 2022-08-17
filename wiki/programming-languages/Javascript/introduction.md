@@ -5,4 +5,4 @@ sidebar_position: 1
 date: August 17, 2022
 ---
 
-Coming soon... 🏃🏻‍♂️
+Coming Soon  🏃🏻‍♂️
