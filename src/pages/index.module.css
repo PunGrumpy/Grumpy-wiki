@@ -30,7 +30,6 @@
     padding: 0;
     flex-direction: row;
     background-color: #f5f4f4;
-    /* background-color: rgb(218, 214, 214); */
     width: 100%;
     overflow: hidden;
     padding: 2.5rem 6rem;
@@ -72,7 +71,7 @@
 
 .button {
     padding: 0.6rem 2rem;
-    background-color: #ffae33;
+    background-color: #ffa622;
     color: white;
     border: none;
     border-radius: 0.6rem;
@@ -81,7 +80,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .button:hover {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .button:active {
     transform: scale(0.98);

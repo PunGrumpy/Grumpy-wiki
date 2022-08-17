@@ -87,7 +87,7 @@ module.exports = {
                     alt: 'Site Logo',
                     src: 'img/logo.png',
                     srcDark: 'img/logo-dark.png',
-                    href: 'https://grumpy-wiki.netlify.app/',
+                    href: '/',
                     target: '_self',
                     width: 32,
                     height: 32,
