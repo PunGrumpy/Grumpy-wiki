@@ -14,7 +14,7 @@ Connecting up all these different objects and adding sensors to them adds a leve
 
 <!-- truncate -->
 
-<!-- ![]() -->
+![Man with rocket](../static/img/blog/man-with-rocket.png)
 
 ## More about IoT
 

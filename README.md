@@ -40,3 +40,4 @@ Feel the official maintenance and development of Docusaurus!
 <a href='https://www.freepik.com/psd/reality'>Reality psd created by ladaz3d - www.freepik.com</a>
 <a href='https://www.freepik.com/psd/background'>Background psd created by Ekayasa.Design - www.freepik.com</a>
 <a href="https://www.freepik.com/vectors/teaser">Teaser vector created by pikisuperstar - www.freepik.com</a>
+<a href='https://www.freepik.com/psd/rocket-3d'>Rocket 3d psd created by ladaz3d - www.freepik.com</a>
