@@ -3,7 +3,7 @@ slug: what-is-big-data
 title: What Is Big Data?
 description: This blog post describe Big data, and covers of the most details Big data
 authors: grumpy
-tag: [big data, coding]
+tags: [big data, coding]
 hide_table_of_contents: false
 ---
 
@@ -31,7 +31,7 @@ Data with an unknown structure is termed unstructured data. Its size is substant
 
 As the name suggests, semi-structured data contains a combination of structured and unstructured data. It is data that hasn't been classified into a specific database but contains vital tags that separate individual elements within the same
 
--   ## Characteristics Of Big Data
+## Characteristics Of Big Data
 
 Following are the big data core characteristics. Understanding the characteristics of big data is vital to know how it works ajd how you can use it
 

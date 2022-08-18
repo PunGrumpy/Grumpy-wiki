@@ -40,6 +40,7 @@ module.exports = {
                     blogSidebarTitle: 'Latest posts',
                     showReadingTime: true,
                     postsPerPage: 3,
+                    editUrl: 'https://github.com/PunGrumpy/Grumpy-wiki/tree/main/',
                     feedOptions: {
                         type: 'all',
                         copyright: `Copyright © ${new Date().getFullYear()} <a href="https://pun-grumpy.vercel.app/" target="_blank">PunGrumpy</a>, Inc.`,

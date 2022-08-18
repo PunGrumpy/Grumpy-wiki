@@ -3,7 +3,7 @@ slug: what-is-rest-api
 title: What Is REST API?
 description: This blog post describe REST API, and covers of the most details REST API
 authors: grumpy
-tag: [api, coding, rest api]
+tags: [api, coding, rest api]
 hide_table_of_contents: false
 ---
 
