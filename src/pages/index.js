@@ -39,12 +39,10 @@ export default function Home() {
         <Layout
             // title={`${siteConfig.title}`}
             title="Home"
-            description="Wiki | VSCODE | JavaScript"
+            description="Wiki | Coding | JavaScript"
         >
-            {/* <HomepageHeader /> */}
             <main>
                 <MyHero />
-                {/* <HomepageFeatures /> */}
             </main>
         </Layout>
     );

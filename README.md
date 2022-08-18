@@ -13,7 +13,6 @@
 ```markdown
 Docuasurus
 ├─ docs
-├─ wiki
 │ ├─ programming languages
 ├─ blog
 └─ contact

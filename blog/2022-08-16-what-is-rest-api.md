@@ -7,15 +7,14 @@ tag: [api, coding, rest api]
 hide_table_of_contents: false
 ---
 
-![What Is REST API?](../static/img/blog/technology-man-holding-virtual-reality.png)
+<!-- ## Representational State Transfer (REST) -->
 
-## Representational State Transfer (REST)
-
-REST (API) is a way of accessing flexible way without having any processing
-
-## REST API
-
+REST ( Representational State Transfer ) is a way of accessing flexible way without having any processing <br/>
 RESTful APIs communicate through HTTP requests to perform CRUD (Create, Read, Update, and Delete) operations in a resource
+
+<!-- truncate -->
+
+![What Is REST API?](../static/img/blog/technology-man-holding-virtual-reality.png)
 
 ### CRUD
 

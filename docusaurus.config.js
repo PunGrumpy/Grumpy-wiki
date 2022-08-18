@@ -25,9 +25,13 @@ module.exports = {
             'classic',
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
-                docs: false,
+                docs: { sidebarPath: require.resolve('./sidebars.js') },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
+                },
+                gtag: {
+                    trackingID: 'GTM-P5GG5DH',
+                    anonymizeIP: true,
                 },
                 blog: {
                     blogTitle: "Grumpy's Blog",
@@ -40,6 +44,10 @@ module.exports = {
                         copyright: `Copyright © ${new Date().getFullYear()} <a href="https://pun-grumpy.vercel.app/" target="_blank">PunGrumpy</a>, Inc.`,
                     },
                 },
+                sitemap: {
+                    changefreq: 'weekly',
+                    priority: 0.5,
+                },
             }),
         ],
     ],
@@ -48,7 +56,7 @@ module.exports = {
             '@docusaurus/plugin-content-docs',
             {
                 id: 'programming-languages',
-                path: 'wiki/programming-languages',
+                path: 'docs/programming-languages',
                 routeBasePath: 'programming-languages',
                 sidebarPath: require.resolve('./sidebars.js'),
                 editUrl: 'https://github.com/PunGrumpy/Grumpy-wiki/tree/main/',

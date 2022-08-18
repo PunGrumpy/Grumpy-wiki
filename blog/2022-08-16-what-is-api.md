@@ -7,11 +7,14 @@ tag: [api, coding]
 hide_table_of_contents: false
 ---
 
+<!-- ## Application Programming Interface (API) -->
+
+API is a software interface that allows two applications to interact with each other without any user intervention. API is a collection of software functions and procedures. In simple terms, API means a software code that can be accessed or executed. <br/>
+API is defined as a code that helps two different software's to communicate and exchange data with each other.
+
+<!-- truncate -->
+
 ![What is API?](../static/img/blog/business-man.png)
-
-## Application Programming Interface (API)
-
-API is a software interface that allows two applications to interact with each other without any user intervention. API is a collection of software functions and procedures. In simple terms, API means a software code that can be accessed or executed. API is defined as a code that helps two different software's to communicate and exchange data with each other.
 
 ## Type Of APIs
 
