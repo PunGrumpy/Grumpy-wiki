@@ -5,4 +5,4 @@ sidebar_position: 1
 date: August 17, 2022
 ---
 
-![Coming Soon](../../../static/img/wiki/reminder-comingsoon.png)
+Coming Soon 🏃🏻‍♂️
