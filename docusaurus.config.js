@@ -17,7 +17,7 @@ module.exports = {
     favicon: 'img/favicon.ico',
     i18n: {
         defaultLocale: 'en',
-        locales: ['th', 'en'],
+        locales: ['en'],
     },
 
     presets: [

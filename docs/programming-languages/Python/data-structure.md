@@ -136,7 +136,7 @@ print(f'{a} * {b} = {a * b}')
 -   G : Global
 -   B : Built-In
 
-![Diagram](../../../static/img/wiki/legb-diagram.jpg)
+![Diagram](../../../static/img/docs/programming-languages/legb-diagram.jpg)
 
 ### Global Scope
 
