@@ -3,7 +3,7 @@ slug: what-is-api
 title: What Is API?
 description: This blog post describe APIs, and covers of the most details APIs
 authors: grumpy
-tags: [api, coding]
+tags: [api, programming]
 hide_table_of_contents: false
 ---
 
