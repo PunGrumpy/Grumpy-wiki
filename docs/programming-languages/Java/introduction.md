@@ -27,7 +27,7 @@ Java is inspired by C and C++. The syntax of Java is similar to these languages 
 
 ### Simple And Familiar
 
-The style of the Java language is very similar to the C language and the C++ language. It's a pure object-oriented language. It inherits the object-oriented technical core of the C++ language, but abandons some of the shortcoming of C++, such as pointers that are easy ti cause errors and many Inheritance, etc., at the same time, a garbage collection mechanism is also added to release the unused memory space and solve the trouble of managing memory space
+Java programming language is simple to learn, understand, read, and write. Java programs are easy to create and implement compared to other programming languages such as C and C++. If you are familiar with the basic principles of programming or the concept of OOP (object-oriented programming), it would be easy to master Java.
 
 ### Object-Oriented
 
@@ -43,20 +43,36 @@ Java source code is complied using Java Complier. The complier converts the sour
 
 ### Complied And Interpreted
 
-`Coming Soon`
+Java offers both compilation and interpretation of programs. It combines the power of compiled languages and the flexibility of interpreted languages.
+
+When a Java program is created, the Java compiler (javac) compiles the java source code into byte code. The Java Virtual Machine (JVM) serves as an interpreter that converts byte code to machine code which is portable and can be executed on any operating system
 
 ### Multi-thread
 
-`Coming Soon`
+Java supports multithreading programming. A thread is an independent process to execute a set of statements. The term multi-threaded refers to creating multiple threads to handle multiple tasks at the same time.
+
+JVM uses multiple threads to execute different blocks of code of the same program in parallel. The multithreading feature allows programmers to write programs to do multiple tasks simultaneously. It improves CPU and main memory utilization as there is no need to wait for the application to finish one task before starting the other
 
 ### Dynamic
 
-`Coming Soon`
+Java is more dynamic compared to C and C++. It can adapt to its evolving environment. It allows programmers to dynamically link new class libraries, objects, and methods. Java programs can have a large amount of run-time information that can be used to resolve accesses to objects
 
 ### Robust
 
-`Coming Soon`
+Java is a robust language that can handle run-time errors as it checks the code during the compile and runtime. If any runtime error is identified by the JVM, it will not be passed directly to the underlying system. Instead, it will immediately terminate the program and stop it from causing any harm to the system. Java has a strong memory management system. It also supports the concepts of garbage collection and exception handling
 
 ### Secure
 
-`Coming Soon`
+Java is a secure language that ensures that programs cannot gain access to memory locations without authorization. It has access modifiers to check memory access. Java also ensures that no viruses enter an applet. Java’s byte-code verifier checks the code blocks for any illegal code that violates the access right. It also does not allow programmers to explicitly create pointers
+
+### High Performance
+
+Java offers high performance as it used the JIT (Just In Time) compiler. The compiler only compiles that method which is being called. The JIT enhances the performance of interpreting byte code by caching interpretations
+
+### Automatic Garbage Collection
+
+The most common and critical problems in C/C++ were memory leaks. FYI, memory leaks are a problem wherein a piece of memory that is no longer in use, fails to be freed. This is because garbage collection has to be done manually. However, Java supports automatic Garbage collection. It keeps checking over such unused memory spaces and frees them automatically
+
+### Conclusion
+
+So, now we know what features make Java a popular and useful programming language among programmers, software developers, and data science professionals. It has a flexible design that enables developers to write code that can run on any machine. The impressive features of this versatile programming language enable programmers to create scalable and high-performance programs. We hope this article helped you understand what are the features of Java.
