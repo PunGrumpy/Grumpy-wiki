@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HeroImg from '../../static/img/mountain-travel.png';
+import HeroImg from '../../static/img/Hero.jpg';
 
 function MyHero() {
     return (
