@@ -129,7 +129,7 @@ module.exports = {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
                 defaultLanguage: 'markdown',
-                additionalLanguages: ['git', 'python', 'powershell'],
+                additionalLanguages: ['git', 'python', 'powershell', 'java', 'javascript'],
             },
         }),
 };
