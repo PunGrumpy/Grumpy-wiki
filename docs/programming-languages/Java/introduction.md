@@ -76,3 +76,13 @@ The most common and critical problems in C/C++ were memory leaks. FYI, memory le
 ### Conclusion
 
 So, now we know what features make Java a popular and useful programming language among programmers, software developers, and data science professionals. It has a flexible design that enables developers to write code that can run on any machine. The impressive features of this versatile programming language enable programmers to create scalable and high-performance programs. We hope this article helped you understand what are the features of Java.
+
+## Java Development
+
+### JDK
+
+JDK (Java Development Kit), called Java Development Kit or Java Development Tool, is a program development environment for writing Java Applets and applications. JDK is the core of the entire java, including the Java Runtime Environment (Java Runtime Environment), some Java tools and Java's core class library (Java API)
+
+## JRE
+
+JRE (Java Runtime Environment) is a runtime environment, and JRE is required to run Java programs. JDK contains JRE, so as long as JDK is installed, you can edit and run Java programs. If you just run ordinary java programs without installing JDK, you only need to install JRE
